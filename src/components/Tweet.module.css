@@ -1,0 +1,48 @@
+.tweetContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+      'avatar user'
+      'avatar text';
+    gap: 4px 16px;
+  }
+  
+  .avatar {
+    grid-area: avatar;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .user {
+    grid-area: user;
+  }
+  
+  .userName {
+    font-weight: bold;
+    color: var(--primary-text);
+  }
+  
+  .userUserName, .date {
+    color: var(--secondary-text);
+    padding-left: 5px;
+  }
+  
+  .tweetText {
+    grid-area: text;
+    color: var(--primary-text);
+  }
+
+  .tweetList {
+    list-style-type: nome;
+    margin: 32px 0;
+    padding: 0;
+  }
+
+  .tweetListItem {
+    padding: 16px 0;
+  }
+
+  .tweetListItem:not(:Last-child) {
+    border-bottom: 1px solid var(--border);
+  }
